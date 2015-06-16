@@ -6,6 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "express": "^4.12.4",
+    "jade": "^1.10.0",
+    "mysql": "^2.7.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Chensienyong/AplikasiToDoList.git"
@@ -18,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/Chensienyong/AplikasiToDoList/issues"
   },
-  "homepage": "https://github.com/Chensienyong/AplikasiToDoList"
+  "homepage": "https://github.com/Chensienyong/AplikasiToDoList",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-express": "^0.3.5"
+  }
 }
