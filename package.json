@@ -1,0 +1,22 @@
+{
+  "name": "AplikasiToDoList",
+  "version": "1.0.0",
+  "description": "Pengembangan Aplikasi To Do List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chensienyong/AplikasiToDoList.git"
+  },
+  "keywords": [
+    "ExpressJs"
+  ],
+  "author": "Chensienyong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chensienyong/AplikasiToDoList/issues"
+  },
+  "homepage": "https://github.com/Chensienyong/AplikasiToDoList"
+}
