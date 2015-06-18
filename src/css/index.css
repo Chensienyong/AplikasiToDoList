@@ -1,0 +1,25 @@
+* {
+    text-align: center;
+}
+
+body {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.list {
+    background-color: #C2C2C2;
+    padding: 10px;
+    padding-right: 30px;
+    margin: 0 10px;
+    text-align: left;
+}
+
+#label-data {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.form-control {
+    text-align: left;
+}

@@ -1,5 +1,15 @@
 html
     head
+        title Todo List
+        link(href='/bootstrap.min.css', rel='stylesheet')
+        link(href='/index.css', rel='stylesheet')
     body
-        p
-            abc
+        h1 Todo List
+        div.list Belum ada data
+        form.form-horizontal(method="POST")
+            div#label-data.col-md-12
+                label.control-label(for="name") Buat Data Baru
+            div.col-md-9
+                input#data.form-control(type="text", placeholder="Masukkan data")
+            div.col-md-3
+                input.btn.btn-success(type="submit", value="Tambah")

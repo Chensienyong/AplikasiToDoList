@@ -1,7 +1,7 @@
 var gulp   = require('gulp'),
     server = require('gulp-express');
 
-gulp.task('index', function () {
+gulp.task('server', function () {
     server.run(['index.js']);
 
     gulp.watch(['src/**/*'], server.notify);
