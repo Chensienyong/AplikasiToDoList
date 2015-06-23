@@ -10,16 +10,18 @@ html
                 if (index % 2 == 0)
                     div.list.odd
                         div.to-do.col-md-10=val.name
-                        div.col-md-2.del Delete
+                        div.col-md-2.del
+                            a(href='remove/' + val.id) Delete
                         div.clearfix
                 else
                     div.list.even
                         div.to-do.col-md-10=val.name
-                        div.col-md-2.del Delete
+                        div.col-md-2.del
+                            a(href='remove/' + val.id) Delete
                         div.clearfix
         else
             div.list
-                div.to-do.col-md-12 Belum Ada Data
+                div.to-do.col-md-12 Belum ada data
                 div.clearfix
         form.form-horizontal(method="POST")
             div#label-data.col-md-12

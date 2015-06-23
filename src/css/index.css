@@ -26,9 +26,9 @@ body {
     text-align: left;
 }
 
-.del {
+.del a {
     color: red;
-    font-weight: bold;
+    text-decoration: none;
     font-style: italic;
 }
 

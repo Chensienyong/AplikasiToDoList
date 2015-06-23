@@ -39,3 +39,9 @@ exports.SetToDo = function (data, callback) {
 
     queryDatabase(query, [null, data], callback);
 }
+
+exports.DeleteToDo = function(index, callback) {
+    var query = "DELETE FROM list WHERE id = ?;";
+
+    queryDatabase(query, [index], callback);
+}
