@@ -17,8 +17,11 @@ app.get('/', function(req, res) {
             console.log(err);
             res.status(500).send("Database Query Failed.");
         }
-console.log(results);
-        res.render('index', {lists: results});
+        if (results.length > 0) {
+            res.render('index', {lists: results});
+        } else {
+            res.render('index', {lists: null});
+        }
     });
 });
 

@@ -5,10 +5,16 @@ html
         link(href='/index.css', rel='stylesheet')
     body
         h1 Todo List
-        div.list
-            div.to-do.col-md-10 Belum ada data
-            div.col-md-2.del Delete
-            div.clearfix
+        -if (lists != null)
+            each val in lists
+                div.list
+                    div.to-do.col-md-10=val.name
+                    div.col-md-2.del Delete
+                    div.clearfix
+        -else
+            div.list
+                div.to-do.col-md-12 Belum Ada Data
+                div.clearfix
         form.form-horizontal(method="POST")
             div#label-data.col-md-12
                 label.control-label(for="data") Buat Data Baru
