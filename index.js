@@ -26,10 +26,22 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', urlEncodedParser, function(req, res) {
-	console.log(req);
+	var data = req.body['data'];
+
+    db.SetToDo(data, function (err, results) {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Database Query Failed.");
+            return;
+        }
+
+        res.redirect('/');
+    });
 });
 
 var server = app.listen(3000, 'localhost', function () {
     var host = server.address().address;
     var port = server.address().port;
+
+    console.log('Running at http://%s:%s', host, port);
 });

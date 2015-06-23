@@ -33,3 +33,9 @@ exports.GetToDo = function (callback) {
     
     queryDatabase(query, null, callback);
 };
+
+exports.SetToDo = function (data, callback) {
+    var query = "INSERT INTO list(`id`, `name`) VALUES (?,?);";
+
+    queryDatabase(query, [null, data], callback);
+}
