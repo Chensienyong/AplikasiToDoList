@@ -8,7 +8,6 @@ body {
 }
 
 .list {
-    background-color: #C2C2C2;
     padding: 10px;
     padding-right: 30px;
     margin: 0 10px;
@@ -31,4 +30,12 @@ body {
     color: red;
     font-weight: bold;
     font-style: italic;
+}
+
+.odd {
+    background-color: #C2C2C2;
+}
+
+.even {
+    background-color: #FFF;
 }
