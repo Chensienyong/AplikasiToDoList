@@ -20,13 +20,13 @@ html
                             a(href='remove/' + val.id) Delete
                         div.clearfix
         else
-            div.list
+            div.list.odd
                 div.to-do.col-md-12 Belum ada data
                 div.clearfix
         form.form-horizontal(method="POST")
             div#label-data.col-md-12
                 label.control-label(for="data") Buat Data Baru
             div.col-md-9
-                input#data.form-control(type="text", placeholder="Masukkan data", name="data")
+                input#data.form-control(type="text", placeholder="Masukkan data", name="data", maxlength="50")
             div.col-md-3
                 input.btn.btn-success(type="submit", value="Tambah")

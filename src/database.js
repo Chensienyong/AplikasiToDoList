@@ -1,9 +1,9 @@
 var mysql  = require('mysql'),
     pool   = mysql.createPool({
-        host: 'localhost',
-        user: 'root',
-        password: '123456',
-        database: 'appToDoList',
+        host: process.env.MYSQLDB_HOST,
+        user: process.env.MYSQLDB_USER,
+        password: process.env.MYSQLDB_PASSWORD,
+        database: process.env.MYSQLDB_DB, //database appToDoList
         connectionLimit: 2
     });
 

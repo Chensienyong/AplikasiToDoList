@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
     db.GetToDo(function (err, results) {
         if (err) {
             console.log(err);
-            res.status(500).send("Database Query Failed.");
+            res.status(500).send("Fetch Data Failed.");
         }
         if (results.length > 0) {
             res.render('index', {lists: results});
@@ -31,7 +31,21 @@ app.post('/', urlEncodedParser, function(req, res) {
     db.SetToDo(data, function (err, results) {
         if (err) {
             console.log(err);
-            res.status(500).send("Database Query Failed.");
+            res.status(500).send("Post Data Failed.");
+            return;
+        }
+
+        res.redirect('/');
+    });
+});
+
+app.get('/remove/:id', function(req, res) {
+    var id = req.params.id;
+
+    db.DeleteToDo(id, function (err, results) {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Remove Data Failed.");
             return;
         }
 
