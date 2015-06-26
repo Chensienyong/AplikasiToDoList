@@ -45,3 +45,9 @@ exports.DeleteToDo = function(index, callback) {
 
     queryDatabase(query, [index], callback);
 }
+
+exports.CheckToDo = function (id, callback) {
+    var query = "SELECT * from list WHERE id = ?;";
+
+    queryDatabase(query, [id], callback);
+}
