@@ -24,22 +24,39 @@ app.set('view engine', 'jade');
 app.set('views', './src/views');
 
 app.get('/', function(req, res) {
-    console.log(req.flash('success'));
     db.GetToDo(function (err, results) {
         if (err) {
             console.log(err);
             res.status(500).send("Fetch Data Failed.");
+            return;
         }
+
+        var messageSuccess = req.flash('success'),
+            messageFailure = req.flash('error'),
+            renderdata = {};
+
+        if (messageSuccess.length > 0) {
+            renderdata.flashSuccess = messageSuccess;
+        }
+        if (messageFailure.length > 0) {
+            renderdata.flashFailure = messageFailure;
+        }
+
         if (results.length > 0) {
-            res.render('index', {lists: results});
-        } else {
-            res.render('index', {lists: null});
+            renderdata.lists = results;
         }
+
+        res.render('index', renderdata);
     });
 });
 
 app.post('/', urlEncodedParser, function(req, res) {
 	var data = req.body['data'];
+    if (data.length > 50) {
+        req.flash('error', 'Data ToDo maksimal 50karakter!');
+        res.redirect('/');
+        return;
+    }
 
     db.SetToDo(data, function (err, results) {
         if (err) {

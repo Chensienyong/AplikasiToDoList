@@ -39,3 +39,19 @@ body {
 .even {
     background-color: #FFF;
 }
+
+.flashbag {
+    margin: 10px;
+    width: 680px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.bg-success {
+    color: #009903;
+}
+
+.bg-danger {
+    color: #96000A;
+}

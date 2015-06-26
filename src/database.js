@@ -30,7 +30,7 @@ function queryDatabase(query, data, callback) {
 
 exports.GetToDo = function (callback) {
     var query = "SELECT * FROM list";
-    
+
     queryDatabase(query, null, callback);
 };
 
