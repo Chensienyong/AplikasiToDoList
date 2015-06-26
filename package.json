@@ -7,10 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "body-parser": "^1.13.1",
-    "express": "^4.13.0",
-    "jade": "^1.10.0",
-    "mysql": "^2.7.0"
+    "body-parser": "*",
+    "connect-flash": "^0.1.1",
+    "express": "^5.0.0-alpha.1",
+    "express-session": "^1.11.3",
+    "jade": "*",
+    "mysql": "*"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,7 @@
   },
   "homepage": "https://github.com/Chensienyong/AplikasiToDoList",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-express": "^0.3.5"
+    "gulp": "*",
+    "gulp-express": "*"
   }
 }

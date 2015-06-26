@@ -4,6 +4,12 @@ html
         link(href='/bootstrap.min.css', rel='stylesheet')
         link(href='/index.css', rel='stylesheet')
     body
+        #main-container
+            if flashError
+                div.flash-error= flashError
+            if flashSuccess
+                div.flash-info= flashSuccess
+
         h1 Todo List
         if (lists != null)
             each val, index in lists
