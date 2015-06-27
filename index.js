@@ -27,7 +27,7 @@ app.get('/', function(req, res) {
     db.GetToDo(function (err, results) {
         if (err) {
             console.log(err);
-            res.status(500).send("Fetch Data Failed.");
+            res.status(500).send("Fetch Data Failed. Check database connection and environment variable.");
             return;
         }
 
@@ -52,6 +52,13 @@ app.get('/', function(req, res) {
 
 app.post('/', urlEncodedParser, function(req, res) {
 	var data = req.body['data'];
+
+    if (data.length == 0) {
+        req.flash('error', 'Data ToDo tidak boleh kosong!');
+        res.redirect('/');
+        return;
+    }
+
     if (data.length > 50) {
         req.flash('error', 'Data ToDo maksimal 50karakter!');
         res.redirect('/');
